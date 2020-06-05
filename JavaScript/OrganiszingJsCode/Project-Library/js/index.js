@@ -8,9 +8,8 @@ this.author = author;
 
 function render(){
 
-    // Must delete all previous dom paragraphs created 
-    var displayDiv = document.getElementById("display-books");
-    displayDiv.removeChild(displayDiv)
+// call helper method to clear display div
+clearAllChildren();
 
     myLibrary.map(book => {
 
@@ -22,7 +21,23 @@ function render(){
         document.getElementById("display-books").appendChild(para);
     })
 }
- 
+
+// helper method - clears all div child elements
+
+function clearAllChildren() {
+
+     // Must delete all previous dom paragraphs created 
+     var displayDiv = document.getElementById("display-books");
+     // var childNode = displayDiv.childNodes[0];
+     // displayDiv.removeChild();
+     var child = displayDiv.lastElementChild;
+     while(child) {
+         displayDiv.removeChild(child);
+         child = displayDiv.lastElementChild;
+     }
+
+     // https://www.geeksforgeeks.org/remove-all-the-child-elements-of-a-dom-node-in-javascript/#:~:text=Remove%20all%20the%20child%20elements%20of%20a%20DOM%20node%20in,which%20produces%20the%20same%20output.
+}
 
 function addBookToLibrary() {
 
