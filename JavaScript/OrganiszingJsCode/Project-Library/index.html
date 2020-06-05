@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Project</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+
+    <h1>Vitual Book Library</h1>
+
+    <form>
+        <label for="title">Title:</label> <br/>
+        <input type="text" value="title" placeholder="title" id="title" /> 
+        <br/>
+        <label for="author">Author:</label> <br/>
+        <input type="text" value="author" id="author" />
+        <br/>
+        <input type="button" value="submit" onclick="addBookToLibrary()"> 
+    </form>
+
+    <button onclick="render()">Show All Books</button>
+
+    <div id="display-books">
+    </div>
+  
+
+</body>
+
+<script src="./js/index.js"></script>
+</html>
