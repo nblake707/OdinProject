@@ -19,7 +19,7 @@ const counterCreator = () => {
     };
 };
 
-const counter = counterCreater();
+const counter = counterCreator();
 
 counter();
 counter();
