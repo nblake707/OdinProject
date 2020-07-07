@@ -25,7 +25,7 @@ const Player = (name, level) => {
         }
         if(level >= enemy.getLevel()) {
             enemy.damage(1);
-            console.log(`${name} had damaged ${enemy.getName()}`);
+            console.log(`${name} has damaged ${enemy.getName()}`);
         }
     };
         return {attack, damage, getLevel, getName}
